@@ -1,0 +1,19 @@
+
+#two{
+    color: rgb(10, 11, 11); 
+   
+    background-color:rgba(223, 217, 217, 0.646);
+    height: 500px; 
+    width: 400px; 
+    padding: 50px; 
+    /* padding-top: 10px; */
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 5%;
+}
+.btn-primary{
+    bs-btn-bg:rgb(11, 37, 37);
+    /* background-color: rgb(11, 37, 37); */
+
+
+}
