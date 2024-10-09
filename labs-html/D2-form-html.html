@@ -1,75 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Forms</title>
-    </head>
 
-    <body >
-        
-        <div style="background-color: greenyellow; padding:10px;">
+<head>
+    <title>Forms</title>
+</head>
+
+<body>
+    
+<div style="display: block;">
+    <div style="background:linear-gradient(to right,greenyellow,pink); padding:10px;">
         <table>
             <tr>
-                <td><h1><u>Hostel Mess Registration Form</u></h1></td>
-                <td><img src="kle logo.jpg" style="padding-left: 450px; width: 250px ;height:200px;"></td>
+                <td>
+                    <h1><u>Hostel Mess Registration Form</u></h1>
+                </td>
+                <td><img src="kle logo.jpg" style="padding-left: 450px; width: 200px ;height:80px;"></td>
             </tr>
-            
+
         </table>
+    </div>
+
+    <div style="display: flex; background: linear-gradient(to right,pink,blue);">
+
+        <div style="margin-left: 10px; margin-top: 10px;">
+            <form style="color: rgb(10, 10, 11);">
+
+                Enter Name: <input style="height:20px;width:150px;background-color: azure;" type="text" />
+                <br /><br />
+                Date of Birth: <input style="height:20px;width:150px; background-color: azure;" type="date" />
+                <br /><br />
+                Enter Age: <input type="range" min="1" max="100" />
+                <br /><br />
+                Enter Email: <input style="height:20px;width:150px;background-color: azure;" type="text" />
+                <br /><br />
+                Enter Password: <input style="height:20px;width:150px;background-color: azure;" type="password" />
+                <br /><br />
+                
+                Address:<textarea> </textarea><br /><br />
+                
+                Gender: <br />
+                <input type="radio" name="Gender"> male
+                <input type="radio" name="Gender"> female
+                <br /><br />
+
+                Beverage : <br />
+                <input type="checkbox" name="Beverage"> Tea
+                <input type="checkbox" name="Beverage"> Coffee
+                <br /><br />
+
+                Meal : <br />
+                <input type="checkbox" name="Meal"> Veg
+                <input type="checkbox" name="Meal"> Non-Veg
+                <input type="checkbox" name="Meal"> Both
+                <br /><br />
+
+                Payment :
+
+                <select>
+                    <option>UPI</option>
+                    <option>Credit card</option>
+                    <option>Debit card</option>
+                </select>
+
+
+                <br /><br />
+                <input value="Register Now" type="submit" style="color: brown; font-weight:bold;">
+                <input value="Reset" type="reset" style="color: brown; font-weight: bold;">
+            </form>
         </div>
-        <div style=" padding-left: 500px;background-image: url(hostelmess.png); width:100%; ">
-        <form>
+        <div style="margin-left: 163px;">
+            <img src="hostelmess.png" alt="" style="width: 100%; height: 100%;">
+        </div>
         
-        Enter your name: <input type="text"/>
-        <br/><br/>
-        Date of Birth: <input type="datetime-local"/>
-        <br/><br/>
-        Enter your Age: <input type="range" min="1" max="100"/>
-        <br/><br/>
-        Enter your Email: <input type="text"/>
-        <br/><br/>
-        Enter your Password: <input type="password"/>
-        <br/><br/>
+    </div>
+    <!-- <hr /> -->
+    <!-- <br /><br /> -->
 
-        address:<textarea> </textarea><br/><br/>
-        Gender: <br/>
-        <input type="radio" name="Gender"> male
-        <input type="radio" name="Gender"> female
-        <br/><br/>
 
-        Beverage : <br/>
-        <input type="checkbox" name="Beverage"> Tea
-        <input type="checkbox" name="Beverage"> Coffee
-        <br/><br/>
-
-        Meal : <br/>
-        <input type="checkbox" name="Meal"> Veg
-        <input type="checkbox" name="Meal"> Non-Veg
-        <input type="checkbox" name="Meal"> Both
-        <br/><br/>
-        
-        Payment : 
-        <select>
-            <option>UPI</option>
-            <option>Credit card</option>
-            <option>Debit card</option>
+    <div style="background:linear-gradient(to right,greenyellow,pink);">
+        <h4 style="margin-top: 0%;">Explore More about college</h4>
+        <select id="sel1" onchange="main()">
+            <option value="op1">Campus Tour</option>
+            <option value="op2">Hostel</option>
         </select>
-        <br/><br/>
-        
-        
-        </div>
-        <br/><br/>
-        <input value="Register Now"
-        type="submit" style="color: brown; font-weight:bold;">
-        <input value="Reset" type="reset" style="color: brown; font-weight: bold;">
-        </form>
-        <br/><br/>
-        <p>Explore More about college</p>
+        <br /></br>
+        <iframe id="i1" width="400" height="280" src="https://www.youtube.com/embed/QloWLV5ex3E"
+            allowfullscreen></iframe>
+    </div>
 
-        <iframe width="400" height="280" src="https://www.youtube.com/embed/QloWLV5ex3E" allowfullscreen></iframe>
 
-        
-        
-                      
 
-    </body>
+    <script>
+        function main() {
+            var select = document.getElementById("sel1");
+            if (select.value === "op1") {
+                fun1();
+            } else {
+                fun2();
+            }
+
+        }
+
+        function fun1() {
+            var videoplayer = document.getElementById("i1");
+            videoplayer.src = "https://www.youtube.com/embed/QloWLV5ex3E";
+        }
+        function fun2() {
+            var videoplayer = document.getElementById("i1");
+            videoplayer.src = "https://www.youtube.com/embed/IVsXzVzqmjs";
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+
 </html>
-
