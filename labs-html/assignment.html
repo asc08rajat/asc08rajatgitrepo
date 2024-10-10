@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>USER STORY 2-Bulb assignment</title>
+</head>
+
+<body>
+    
+    <script>
+        function displayNone(){
+            var vanishImage=window.document.getElementById("on").style.display='none';
+            return vanishImage;
+        }
+
+        function displayImg(){
+             var addImage=window.document.getElementById("secondImage").style.display='block';
+             return addImage;
+        }
+    </script>
+    <!-- DOM manipulation provides the ability to dynamically update the contents of the html document -->
+     <div id="on" style="width:250px;height: 250px; background-color:black" onclick="displayNone()">
+        <img src="on.gif" style="margin:50px" id="bulb">
+
+    </div>
+    <hr/>
+    <div id="of" style="width:250px;height: 250px; background-color:rgb(110, 110, 110)" onclick="displayImg()">
+        <img src="off.gif" style="margin:50px" id="bulb">
+        <div>
+            <img id='secondImage' style="display:none; background-color: black; margin-left:500px; margin-top: -250px;" src="on.gif">
+            <!-- <img id='secondImage' style="display:none; background-color: black; margin-left:500px; margin-top: -250px; width: 200px ;height: 250px;" src="https://i.pinimg.com/originals/ec/5a/4c/ec5a4c4ce6878058b3479e0a4ddb34fd.jpg"> -->
+            
+        </div>
+        
+
+    </div>
+</body>
+</html>
