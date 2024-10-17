@@ -1,0 +1,40 @@
+#heading{
+    /* background:linear-gradient(to right,#a2a8d3,#e7eaf6);  */
+    background-color:#e7eaf6 ;
+    padding:10px;
+    text-align: center;
+}
+
+#headimage{
+    /* border: 10px solid black; */
+    display: inline;
+    padding-left:200px; 
+    /* padding-right: 450px;  */
+    /* width: 600px ; */
+    height:150px;
+}
+#form{
+    color: rgb(10, 10, 11);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    width: 400px;
+    padding: 10px;
+    
+    
+}
+.forminput{
+    height:20px;
+    width:200px;
+    background-color: azure;
+}
+
+#display{
+    border: 2px solid black ; 
+    width: 100%;
+    margin-left: 2px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 210px;
+}

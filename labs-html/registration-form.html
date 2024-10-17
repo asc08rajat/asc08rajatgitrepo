@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="registration-form.css">
+    <script src="registration-form.js"></script>
+    <style>
+        table,
+        td,
+        th {
+            border: 2px black solid;
+            padding: 10px;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: block;">
+        <div id="heading">
+            <h1>Hostel Mess Registration Page</h1>
+        </div>
+
+        <div style="display: flex; background: linear-gradient(to right,#a2a8d3,#e7eaf6);">
+
+            <div style="margin-left: 10px; margin-top: 10px;">
+                <form id="form" onsubmit="clickk(event)">
+                    <label for="entername">
+                        Enter Name:
+                        <input id="entername" class="forminput" type="text" placeholder="Enter Your Name">
+                        <br /><br />
+                        <label for="dob">
+                            Date of Birth:
+                            <input id="dob" class="forminput" type="date" />
+                        </label>
+                        <br /><br />
+                        <label for="age">
+                            Enter Age:
+                            <input id="age" class="forminput" type=number min="0" placeholder="Enter Your Age" />
+                        </label>
+                        <br /><br />
+                        <label for="email">
+                            Enter Email:
+                            <input id="email" class="forminput" type="email" placeholder="Enter Your Email" />
+                        </label>
+                        <br /><br />
+                        <label for="pass">
+                            Enter Password:
+                            <input id="pass" class="forminput" type="password" placeholder="Enter Your Password" />
+                        </label>
+                        <br /><br />
+                        <label for="Address">
+                            Address:<textarea id="Address"> </textarea>
+                        </label>
+
+                        <br /><br />
+
+                        Gender: <br />
+                        <label for="male">
+                            <input id="male" type="radio" name="Gender" value="male"> male
+                        </label>
+                        <label for="female">
+                            <input id="female" type="radio" name="Gender" value="female"> female
+                        </label>
+                        <br /><br />
+
+                        Beverage : <br />
+                        <label for="tea">
+                            <input id="tea" type="checkbox" name="Beverage" value="tea"> Tea
+                        </label>
+                        <label for="coffee">
+                            <input id="coffee" type="checkbox" name="Beverage" value="coffee"> Coffee
+                        </label>
+                        <br /><br />
+
+                        Meal : <br />
+                        <label for="veg">
+                            <input id="veg" type="checkbox" name="Meal"> Veg
+                        </label>
+                        <label for="nonveg">
+                            <input id="nonveg" type="checkbox" name="Meal"> Non-Veg
+                        </label>
+                        <label for="both">
+                            <input id="both" type="checkbox" name="Meal"> Both
+                        </label>
+                        <br /><br />
+
+                        <label for="payment">
+                            Payment :
+                            <select id="payment">
+                                <option>Select Mode</option>
+                                <option>UPI</option>
+                                <option>Credit card</option>
+                                <option>Debit card</option>
+                            </select>
+                        </label>
+
+
+                        <br /><br />
+                        <button type="submit" style="color: brown; font-weight:bold;">
+                            Register Now
+                        </button>
+                        <button type="reset" style="color: brown; font-weight: bold;">
+                            Reset
+                        </button>
+                </form>
+
+
+
+            </div>
+            <div id="display">
+                <h5>Data Retrivied:</h5>
+                <table id="tablename">
+                    <tr>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Beverage</th>
+
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+        <!-- <hr /> -->
+        <!-- <br /><br /> -->
+
+
+        <div style="background-color: #e7eaf6;">
+            <h4 style="margin-top: 0%;">Explore More about college</h4>
+            <select id="sel1" onchange="main()">
+                <option>Choose</option>
+                <option value="op1">Campus Tour</option>
+                <option value="op2">Hostel</option>
+            </select>
+            <br /></br>
+            <iframe id="i1" width="400" height="280" src="https://www.youtube.com/embed/QloWLV5ex3E"
+                allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

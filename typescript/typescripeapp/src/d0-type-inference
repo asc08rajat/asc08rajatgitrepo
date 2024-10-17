@@ -1,0 +1,14 @@
+//type inference
+
+let x=10;
+x=20;
+//x="hello";// error :string is not assigned into number
+
+let y="hello"
+//create var with different types in ts
+
+let z:number;
+z=20;
+//z="heloo" // error :string is not assigned into number
+
+console.log(z)
