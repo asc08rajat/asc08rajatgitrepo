@@ -26,7 +26,28 @@ function clickk(event){
     const age=document.getElementById('age').value;
     const email=document.getElementById('email').value;
     const GENDER = document.querySelector('input[name="Gender"]:checked') ? document.querySelector('input[name="Gender"]:checked').value : '';
-    const Beverage=document.querySelector('input[name="Beverage"]:checked')? document.querySelector('input[name="Beverage"]:checked').value:'';
+
+    const selectedOptions = [];
+    if (document.getElementById('tea').checked) {
+        selectedOptions.push('Tea');
+    }
+    if (document.getElementById('coffee').checked) {
+        selectedOptions.push('Coffee');
+    }
+    const Beverage = selectedOptions.join(', ');
+    // const Beverage=document.querySelector('input[name="Beverage"]:checked')? document.querySelector('input[name="Beverage"]:checked').value:'';
+     //for checkbox
+    // const selectedMeal = [];
+    // if (document.getElementById('veg').checked) {
+    //     selectedOptions.push('Veg');
+    // }
+    // if (document.getElementById('nonveg').checked) {
+    //     selectedOptions.push('Nonveg');
+    // }
+    // if (document.getElementById('both').checked) {
+    //     selectedOptions.push('both');
+    // }
+    // const Meal = selectedMeal.join(', ');
 
     
     const table=document.getElementById('tablename');
@@ -39,6 +60,7 @@ function clickk(event){
     const emailcell=newrow.insertCell(3);
     const gendercell=newrow.insertCell(4);
     const Beveragecell=newrow.insertCell(5);
+    // const Mealcell=newrow.insertCell(6);
     
 
     namecell.textContent=name;
@@ -47,8 +69,13 @@ function clickk(event){
     emailcell.textContent=email;
     gendercell.textContent=GENDER;
     Beveragecell.textContent=Beverage;
+    // Mealcell.textContent=Meal;
+
+
+
+    
     
     
 }
-
+document.querySelector('form').reset();
 clickk();
