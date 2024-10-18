@@ -18,15 +18,16 @@
 // }
 
 
-function clickk(event){
+function clickk(event) {
     event.preventDefault();
 
-    const name=document.getElementById('entername').value;
-    const birth=document.getElementById('dob').value;
-    const age=document.getElementById('age').value;
-    const email=document.getElementById('email').value;
+    const name = document.getElementById('entername').value;
+    const birth = document.getElementById('dob').value;
+    const age = document.getElementById('age').value;
+    const email = document.getElementById('email').value;
     const GENDER = document.querySelector('input[name="Gender"]:checked') ? document.querySelector('input[name="Gender"]:checked').value : '';
 
+    // For Beverage selection (Tea/Coffee)
     const selectedOptions = [];
     if (document.getElementById('tea').checked) {
         selectedOptions.push('Tea');
@@ -35,47 +36,40 @@ function clickk(event){
         selectedOptions.push('Coffee');
     }
     const Beverage = selectedOptions.join(', ');
-    // const Beverage=document.querySelector('input[name="Beverage"]:checked')? document.querySelector('input[name="Beverage"]:checked').value:'';
-     //for checkbox
-    // const selectedMeal = [];
-    // if (document.getElementById('veg').checked) {
-    //     selectedOptions.push('Veg');
-    // }
-    // if (document.getElementById('nonveg').checked) {
-    //     selectedOptions.push('Nonveg');
-    // }
-    // if (document.getElementById('both').checked) {
-    //     selectedOptions.push('both');
-    // }
-    // const Meal = selectedMeal.join(', ');
 
-    
-    const table=document.getElementById('tablename');
+    // For Meal selection (Veg/Nonveg/Both)
+    const selectedMeal = [];
+    if (document.getElementById('veg').checked) {
+        selectedMeal.push('Veg');
+    }
+    if (document.getElementById('nonveg').checked) {
+        selectedMeal.push('Nonveg');
+    }
+    if (document.getElementById('both').checked) {
+        selectedMeal.push('Both');
+    }
+    const Meal = selectedMeal.join(', ');
 
-    const newrow=table.insertRow();
+    // Add a new row to the table
+    const table = document.getElementById('tablename');
+    const newrow = table.insertRow();
 
-    const namecell=newrow.insertCell(0);
-    const dobcell=newrow.insertCell(1);
-    const agecell=newrow.insertCell(2);
-    const emailcell=newrow.insertCell(3);
-    const gendercell=newrow.insertCell(4);
-    const Beveragecell=newrow.insertCell(5);
-    // const Mealcell=newrow.insertCell(6);
-    
+    const namecell = newrow.insertCell(0);
+    const dobcell = newrow.insertCell(1);
+    const agecell = newrow.insertCell(2);
+    const emailcell = newrow.insertCell(3);
+    const gendercell = newrow.insertCell(4);
+    const Beveragecell = newrow.insertCell(5);
+    const Mealcell = newrow.insertCell(6);
 
-    namecell.textContent=name;
-    dobcell.textContent=birth
-    agecell.textContent=age;
-    emailcell.textContent=email;
-    gendercell.textContent=GENDER;
-    Beveragecell.textContent=Beverage;
-    // Mealcell.textContent=Meal;
+    namecell.textContent = name;
+    dobcell.textContent = birth;
+    agecell.textContent = age;
+    emailcell.textContent = email;
+    gendercell.textContent = GENDER;
+    Beveragecell.textContent = Beverage;
+    Mealcell.textContent = Meal;
 
-
-
-    
-    
-    
+    // Reset form after submission
+    document.querySelector('form').reset();
 }
-document.querySelector('form').reset();
-clickk();
