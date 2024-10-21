@@ -70,6 +70,24 @@ function clickk(event) {
     Beveragecell.textContent = Beverage;
     Mealcell.textContent = Meal;
 
+
+    const formlocal={
+        name:name,
+        birth:birth,
+        age:age,
+        email:email,
+        GENDER:GENDER,
+        Beverage:Beverage,
+        Meal:Meal
+    };
+    let savedata=JSON.parse(localStorage.getItem('formlocal'))||[];
+    savedata.push(formlocal);
+    localStorage.setItem('formlocal',JSON.stringify(savedata));
+
+
     // Reset form after submission
-    document.querySelector('form').reset();
+    document.querySelector('form').reset(); 
 }
+window.onload=function(){
+    let savedata=JSON.parse(localStorage.getItem('formlocal'))||[];
+};
