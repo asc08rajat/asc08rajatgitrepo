@@ -48,7 +48,7 @@ function updateTable() {
 
 // Function to save data to localStorage and update the table on form submission
 function saveData(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent form from refreshing
 
     const name = document.getElementById('entername').value;
     const birth = document.getElementById('dob').value;
@@ -85,17 +85,24 @@ function saveData(event) {
     localStorage.setItem('formlocal', JSON.stringify(savedata));
 
     // Update the table with saved data
-    updateTable();
+    loadTableData();
 
     // Reset the form after submission
     document.querySelector('form').reset();
 }
 
-window.onload = function() {
+// Function to load data from localStorage and populate the table
+function loadTableData() {
     const savedata = JSON.parse(localStorage.getItem('formlocal')) || [];
     const table = document.getElementById('tablename');
 
-    // Populate table with saved data on page load
+    // Clear table before updating it
+    const rows = table.getElementsByTagName('tr');
+    for (let i = rows.length - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+
+    // Populate table with saved data
     savedata.forEach(data => {
         const newrow = table.insertRow();
         newrow.insertCell(0).textContent = data.name;
@@ -106,6 +113,11 @@ window.onload = function() {
         newrow.insertCell(5).textContent = data.Beverage;
         newrow.insertCell(6).textContent = data.Meal;
     });
+}
+
+window.onload = function() {
+    // Load the saved data into the table when the page loads
+    loadTableData();
 
     // Add event listeners to update table dynamically as the user types
     const inputs = document.querySelectorAll('input, textarea');

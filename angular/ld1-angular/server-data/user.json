@@ -1,0 +1,20 @@
+{
+    "User":[
+    {
+      "name": "Rajat Lad",
+      "DOB": "07-03-2002",
+      "Age": 22,
+      "Email": "rajatlad2002@gmail.com",
+      "Gender": "male",
+      "Beverage": "coffee"
+    },
+    {
+      "name": "Test-user",
+      "DOB": "07-03-2000",
+      "Age": 24,
+      "Email": "testuser@gmail.com",
+      "Gender": "male",
+      "Beverage": "tea"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+#heading {
+    background-color: #6a7cc1;
+    padding: 10px;
+    text-align: center;
+}
+
+#form {
+    color: rgb(10, 10, 11);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 400px;
+    padding: 10px;
+    height: 508px;
+}
+
+.forminput {
+    height: 20px;
+    width: 200px;
+    background-color: azure;
+}
+
+#display {
+    border: 2px solid black;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 180px;
+}
+
+#tablename {
+    padding-right: 110px;
+    margin-left: 1px;
+    border-collapse: collapse;
+}
+
