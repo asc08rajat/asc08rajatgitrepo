@@ -1,3 +1,5 @@
+
+// --------------------------------
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import {User} from "../model/user.model"
@@ -5,7 +7,7 @@ import {User} from "../model/user.model"
     providedIn:'root'
 })
 export class userService{
-baseUrl: string="http://localhost:5200/user";
+baseUrl: string="http://localhost:3000/User";
 //performs http requests.
 constructor(private http:HttpClient){
  

@@ -1,26 +1,35 @@
-<h1>My Angular App....</h1><br>
-<h2>Property :{{title}}</h2>
-<h3>List of users</h3>
+<!-- <button (click)="downloadJSON()">Download Users JSON</button> -->
 
-<table>
-    <thead>
+<!-- <h1>My Angular App....</h1><br>
+<h2>Property :{{title}}</h2>
+<h3><u>List of users:</u></h3>
+
+<table id="table" border="2px solid black" >
+    <thead id="head">
     <tr>
         <td>Name</td>
         <td>Age</td>
         <td>Gender</td>
+        <td>Email</td>
+        <td>DOB</td>
+        <td>Beverage</td>
     </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let user of users">
-            <td>{{user.name}}</td>
-            <td>{{user.Age}}</td>
-            <td>{{user.Gender}}</td>
+    <tbody id="body">
+        <tr *ngFor="let x of user">
+            <td>{{x.name}}</td>
+            <td>{{x.Age}}</td>
+            <td>{{x.Gender}}</td>
+            <td>{{x.Email}}</td>
+            <td>{{x.DOB}}</td>
+            <td>{{x.Beverage}}</td>
+            
         </tr>
     </tbody>
-</table>
+</table> -->
 
 
- <!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -123,9 +132,34 @@
               </tr>
           </table>
           <button type="reset" (click)="resetTable()" style="color: brown; font-weight: bold; margin-top: 10px;">Reset</button>
+          
+          <table id="table" border="2px solid black">
+            <caption>Server Table</caption>
+            <thead id="head">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Gender</td>
+                <td>Email</td>
+                <td>DOB</td>
+                <td>Beverage</td>
+            </tr>
+            </thead>
+            <tbody id="body">
+                <tr *ngFor="let x of user">
+                    <td>{{x.name}}</td>
+                    <td>{{x.Age}}</td>
+                    <td>{{x.Gender}}</td>
+                    <td>{{x.Email}}</td>
+                    <td>{{x.DOB}}</td>
+                    <td>{{x.Beverage}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
       </div>
   </div>
 
   
 </div>
-</body>  -->
+</body> 

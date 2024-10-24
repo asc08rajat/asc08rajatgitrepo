@@ -15,6 +15,14 @@
       "Email": "testuser@gmail.com",
       "Gender": "male",
       "Beverage": "tea"
+    },
+    {
+      "name": "Test-user1",
+      "DOB": "07-03-2002",
+      "Age": 25,
+      "Email": "testuser1@gmail.com",
+      "Gender": "male",
+      "Beverage": "coffee"
     }
   ]
 }
