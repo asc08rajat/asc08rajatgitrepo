@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@angular/cli": "^18.2.9"
+    "@angular/cli": "^18.2.9",
+    "bootstrap": "^5.3.3"
   },
   "name": "asc08rajatgitrepo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

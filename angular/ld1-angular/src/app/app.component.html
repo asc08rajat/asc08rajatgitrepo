@@ -29,7 +29,7 @@
 </table> -->
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -64,22 +64,22 @@
               <br><br>
 
               <label for="dob">Date of Birth:</label>
-              <input id="dob" class="forminput" type="date" [(ngModel)]="dob" name="dob">
+              <input id="dob" class="forminput" type="date" [(ngModel)]="Dob" name="dob">
               <br><br>
 
               <label for="age">Enter Age:</label>
-              <input id="age" class="forminput" type="number" [(ngModel)]="age" name="age" min="0" placeholder="Enter Your Age">
+              <input id="age" class="forminput" type="number" [(ngModel)]="Age" name="age" min="0" placeholder="Enter Your Age">
               <br><br>
 
               <label for="email">Enter Email:</label>
-              <input id="email" class="forminput" type="email" [(ngModel)]="email" name="email" placeholder="Enter Your Email">
+              <input id="email" class="forminput" type="email" [(ngModel)]="Email" name="email" placeholder="Enter Your Email">
               <br><br>
 
               <label for="male">
-                  <input id="male" type="radio" [(ngModel)]="gender" name="gender" value="male"> Male
+                  <input id="male" type="radio" [(ngModel)]="Gender" name="gender" value="male"> Male
               </label>
               <label for="female">
-                  <input id="female" type="radio" [(ngModel)]="gender" name="gender" value="female"> Female
+                  <input id="female" type="radio" [(ngModel)]="Gender" name="gender" value="female"> Female
               </label>
               <br><br>
 
@@ -123,12 +123,12 @@
               </tr>
               <tr *ngFor="let data of formData">
                   <td>{{ data.name }}</td>
-                  <td>{{ data.dob }}</td>
-                  <td>{{ data.age }}</td>
-                  <td>{{ data.email }}</td>
-                  <td>{{ data.gender }}</td>
-                  <td>{{ data.beverages }}</td>
-                  <td>{{ data.meal }}</td>
+                  <td>{{ data.Dob }}</td>
+                  <td>{{ data.Age }}</td>
+                  <td>{{ data.Email }}</td>
+                  <td>{{ data.Gender }}</td>
+                  <td>{{ data.Beverages }}</td>
+                  <td>{{ data.Meal }}</td>
               </tr>
           </table>
           <button type="reset" (click)="resetTable()" style="color: brown; font-weight: bold; margin-top: 10px;">Reset</button>

@@ -60,11 +60,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { User } from './model/user.model';
 import { userService } from './service/user-service';
+import { PracticeAppComponent} from './practice-app/practice-app.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, CommonModule,PracticeAppComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -76,12 +77,12 @@ export class AppComponent implements OnInit {
  }
   // Variables to hold form data
   name: string = '';
-  dob: string = '';
-  age: number | null = null;
-  email: string = '';
-  gender: string = '';
-  beverages: string[] = [];
-  meal: string[] = [];
+  Dob: string = '';
+  Age: number | null = null;
+  Email: string = '';
+  Gender: string = '';
+  Beverages: string[] = [];
+  Meal: string[] = [];
 
   // Array to hold saved form data
   formData: any[] = [];
@@ -102,12 +103,12 @@ export class AppComponent implements OnInit {
     event.preventDefault();
     const newFormEntry = {
       name: this.name,
-      dob: this.dob,
-      age: this.age,
-      email: this.email,
-      gender: this.gender,
-      beverages: this.beverages.join(', '),
-      meal: this.meal.join(', ')
+      Dob: this.Dob,
+      Age: this.Age,
+      Email: this.Email,
+      Gender: this.Gender,
+      Beverages: this.Beverages.join(', '),
+      Meal: this.Meal.join(', ')
     };
 
     // Add new entry to formData array
@@ -116,6 +117,12 @@ export class AppComponent implements OnInit {
     // Store data in localStorage
     localStorage.setItem('formlocal', JSON.stringify(this.formData));
 
+    this.userService.addUser(newFormEntry).subscribe(response => {
+      console.log('User saved successfully!', response);
+    }, error => {
+      console.error('Error saving user!', error);
+    });
+
     // Reset form fields after submission
     this.resetForm();
   }
@@ -123,12 +130,12 @@ export class AppComponent implements OnInit {
   // To reset form fields
   resetForm() {
     this.name = '';
-    this.dob = '';
-    this.age = null;
-    this.email = '';
-    this.gender = '';
-    this.beverages = [];
-    this.meal = [];
+    this.Dob = '';
+    this.Age = null;
+    this.Email = '';
+    this.Gender = '';
+    this.Beverages = [];
+    this.Meal = [];
   }
   
   resetTable(){
@@ -139,11 +146,11 @@ export class AppComponent implements OnInit {
   toggleBeverage(beverage: string, event: Event) {
     const isChecked = (event.target as HTMLInputElement).checked;
     if (isChecked) {
-      this.beverages.push(beverage);
+      this.Beverages.push(beverage);
     } else {
-      const index = this.beverages.indexOf(beverage);
+      const index = this.Beverages.indexOf(beverage);
       if (index > -1) {
-        this.beverages.splice(index, 1);
+        this.Beverages.splice(index, 1);
       }
     }
   }
@@ -151,15 +158,13 @@ export class AppComponent implements OnInit {
   toggleMeal(mealOption: string, event: Event) {
     const isChecked = (event.target as HTMLInputElement).checked;
     if (isChecked) {
-      this.meal.push(mealOption);
+      this.Meal.push(mealOption);
     } else {
-      const index = this.meal.indexOf(mealOption);
+      const index = this.Meal.indexOf(mealOption);
       if (index > -1) {
-        this.meal.splice(index, 1);
+        this.Meal.splice(index, 1);
       }
     }
   }
   
 }
-
-

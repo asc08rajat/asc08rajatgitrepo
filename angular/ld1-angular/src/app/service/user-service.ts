@@ -2,7 +2,8 @@
 // --------------------------------
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import {User} from "../model/user.model"
+import {User} from "../model/user.model";
+import { Observable } from 'rxjs';
 @Injectable({
     providedIn:'root'
 })
@@ -16,4 +17,13 @@ constructor(private http:HttpClient){
 getUsers(){
     return this.http.get<User[]>(this.baseUrl);
 }
+
+addUser(userData: any): Observable<any> {
+    return this.http.post<User[]>(this.baseUrl,userData);
 }
+}
+
+
+// createUser(user:User){
+//     return this.http.post(this.baseUrl,user);
+// }
