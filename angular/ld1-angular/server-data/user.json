@@ -27,46 +27,7 @@
       "gender": "male",
       "beverages": "Tea",
       "meal": "Nonveg"
-    },
-    {
-      "id": "b5c0",
-      "name": "rajat anil lad",
-      "dob": "2024-10-24",
-      "age": 77,
-      "email": "rajatlad2002@gmail.com",
-      "gender": "male",
-      "beverages": "Tea",
-      "meal": "Nonveg"
-    },
-    {
-      "id": "3791",
-      "name": "ragja",
-      "Dob": "2024-10-02",
-      "Age": 22,
-      "Email": "rajatlad2002@gmail.com",
-      "Gender": "male",
-      "Beverages": "Tea",
-      "Meal": "Veg"
-    },
-    {
-      "id": "a9ad",
-      "name": "ragja",
-      "Dob": "",
-      "Age": 22,
-      "Email": "rajatlad2002@gmail.com",
-      "Gender": "male",
-      "Beverages": "Tea",
-      "Meal": "Veg"
-    },
-    {
-      "id": "127e",
-      "name": "ragja",
-      "Dob": "2024-10-04",
-      "Age": 22,
-      "Email": "rajatlad2002@gmail.com",
-      "Gender": "male",
-      "Beverages": "Tea",
-      "Meal": "Veg"
     }
+   
   ]
 }

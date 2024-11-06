@@ -83,10 +83,12 @@ export class AppComponent implements OnInit {
   Gender: string = '';
   Beverages: string[] = [];
   Meal: string[] = [];
+  currentData: FormData | null = null;
 
   // Array to hold saved form data
   formData: any[] = [];
-
+   // Method to select a user for editing
+ 
   // On component initialization, retrieve data from localStorage
   ngOnInit() {
     console.log("asynchrously retriveing data from the server");
@@ -96,6 +98,7 @@ export class AppComponent implements OnInit {
     if (savedData) {
       this.formData = JSON.parse(savedData);
     }
+    
   }
 
   // On form submission
@@ -125,6 +128,7 @@ export class AppComponent implements OnInit {
 
     // Reset form fields after submission
     this.resetForm();
+
   }
 
   // To reset form fields

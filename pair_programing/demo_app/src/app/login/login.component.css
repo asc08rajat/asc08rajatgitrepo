@@ -1,0 +1,23 @@
+
+#one{
+    color: rgb(7, 7, 7); 
+   
+    background-color:rgba(226, 234, 75, 0.916);
+    height: 350px; 
+    width: 350px; 
+    padding: 50px; 
+    padding-top: 10px;
+    margin: auto;
+    border: 0.5px solid black;
+    border-radius: 5%;
+}
+#two{
+    color: rgb(10, 10, 11);
+}
+.des{
+    
+    color:red;
+    font-size: small;
+}
+
+

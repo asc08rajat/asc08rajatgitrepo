@@ -21,6 +21,13 @@ getUsers(){
 addUser(userData: any): Observable<any> {
     return this.http.post<User[]>(this.baseUrl,userData);
 }
+updateUser(id: string, updatedData: Partial<User>): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${id}`, updatedData);
+}
+
+deleteUser(id: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`);
+}
 }
 
 

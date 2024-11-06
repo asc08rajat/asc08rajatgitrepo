@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@angular/cli": "^18.2.9",
     "bootstrap": "^5.3.3"
   },
   "name": "asc08rajatgitrepo",
