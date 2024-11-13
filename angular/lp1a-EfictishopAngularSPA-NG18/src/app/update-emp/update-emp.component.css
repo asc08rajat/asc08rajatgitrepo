@@ -1,0 +1,8 @@
+form {
+    max-width: 500px;
+    margin: auto; /* Center the form */
+}
+
+h3 {
+    color: #007bff; /* Primary color for the title */
+}

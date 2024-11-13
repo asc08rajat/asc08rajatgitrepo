@@ -1,6 +1,6 @@
 export class User{
     
-    name?:string;
+    Name?:string;
     DOB?: string;
     Age?: number;
     Email?: string;

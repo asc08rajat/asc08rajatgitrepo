@@ -1,0 +1,123 @@
+{
+  "User": [
+    {
+      "Name": "rajat",
+      "DOB": " 07-03-2002",
+      "Age": " 23",
+      "Email": "rajatlad2002@gmail.com",
+      "Gender": " male",
+      "Beverage": " coffee",
+      "Meal": "non-veg",
+      "id": "1013"
+    },
+    {
+      "id": "6796",
+      "Name": "rajat",
+      "Email": "rajatlad2002@gmail.com",
+      "DOB": "2024-11-26",
+      "Age": 22,
+      "Beverage": "",
+      "Payment": "Credit card"
+    },
+    {
+      "id": "e3b6",
+      "Name": "GXDFDX",
+      "Email": "rajatlad2002@gmail.com",
+      "DOB": "2024-11-27",
+      "Age": 4243,
+      "Beverage": true,
+      "Meal": true,
+      "Payment": "Credit card"
+    },
+    {
+      "id": null,
+      "Name": "bodhaaa",
+      "Email": "trste@gmail.com",
+      "DOB": "2024-11-13",
+      "Age": 22,
+      "Gender": "male",
+      "Beverage": true,
+      "Meal": true,
+      "Payment": "Credit card"
+    },
+    {
+      "id": "633339",
+      "Name": "nitish",
+      "Email": "nitish@gmail.com",
+      "DOB": "2024-11-13",
+      "Age": 22,
+      "Gender": "male",
+      "Beverage": true,
+      "Meal": true,
+      "Payment": "UPI"
+    },
+    {
+      "id": "b7491c9d-5c04-4725-b125-c7059a6c0929",
+      "Name": "nitish",
+      "Email": "nitish@gmail.com",
+      "DOB": "2024-11-13",
+      "Age": 22,
+      "Gender": "male",
+      "Beverage": true,
+      "Meal": true,
+      "Payment": "UPI"
+    },
+    {
+      "id": "bf1c24d8-18d2-4f46-b2c5-7bcdefed18db",
+      "Name": "nitish",
+      "Email": "nitish@gmail.com",
+      "DOB": "2024-11-04",
+      "Age": 22,
+      "Gender": "male",
+      "Beverage": true,
+      "Meal": true,
+      "Payment": "Credit card"
+    }
+  ],
+  "Login": [
+    {
+      "userName": "rajatlad",
+      "Password": "Rajat@2002",
+      "id": "8bb3"
+    },
+    {
+      "id": "a843",
+      "userName": ""
+    },
+    {
+      "id": "a874",
+      "userName": "Rajat_sdsad",
+      "password": "ewqdwdsad"
+    },
+    {
+      "id": "1450",
+      "userName": "sadsad",
+      "password": "dsdsad"
+    },
+    {
+      "id": "e4c0",
+      "userName": "Rajat_lad",
+      "password": "DGFDFHFH"
+    },
+    {
+      "id": null,
+      "userName": "bodhA",
+      "password": "12"
+    },
+    {
+      "id": "633339",
+      "userName": "nitish_v",
+      "password": "123"
+    },
+    {
+      "id": "b7491c9d-5c04-4725-b125-c7059a6c0929",
+      "userName": "nitish_v",
+      "password": "123"
+    },
+    {
+      "id": "bf1c24d8-18d2-4f46-b2c5-7bcdefed18db",
+      "userName": "nitish_v",
+      "password": "1234"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+- Start mysql server
+- connect to server 

@@ -1,0 +1,115 @@
+<!-- <br>
+<h4>Register</h4>
+
+
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" formControlName="adminName" class="form-control"
+                [ngClass]="{'is-invalid':registerForm.controls['adminName'].errors,'boldItalicError':registerForm.controls['adminName']?.errors}">
+
+
+            <div *ngIf="registerForm.controls['adminName']?.errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['adminName']?.errors?.['required']">
+                     User Name is required
+                </div>
+
+            </div>
+            <label>Password</label>
+            <input type="password" formControlName="Password" class="form-control"
+                [ngClass]="{'is-invalid':registerForm.controls['Password'].errors,'boldItalicError':registerForm.controls['Password'].errors}">
+
+
+            <div *ngIf="registerForm.controls['Password'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['Password'].errors?.['required']">
+                    Password is required
+                </div>
+
+            </div>
+
+            <label>Salary</label>
+            <input type="text" formControlName="Salary" class="form-control"
+                [ngClass]="{'is-invalid':registerForm.controls['Salary']?.errors,'boldItalicError':registerForm.controls['Salary']?.errors}">
+
+
+            <div *ngIf="registerForm.controls['Salary'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="registerForm.controls['Salary'].errors?.['required']">
+                    Salary is required
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+    </form>
+</div> -->
+
+<br />
+<div class="container  mb-3 p-4 shadow-lg bg-white rounded " style="max-width:400px; ">
+    <h4 class="text-center mb-4">Register</h4>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <label class="form-label">User Name</label>
+            <input type="text" formControlName="adminName" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['adminName'].errors, 'boldItalicError': registerForm.controls['adminName'].errors}">
+            <div *ngIf="registerForm.controls['adminName'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['adminName'].errors?.['required']">
+                    User Name is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" formControlName="Password" class="form-control"
+                [ngClass]="{'is-invalid': submitted && registerForm.controls['Password'].errors, 'boldItalicError': registerForm.controls['Password'].errors}">
+            <div *ngIf="registerForm.controls['Password'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['Password'].errors?.['required']">
+                    Password is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="form-label">Salary</label>
+            <input type="text" formControlName="Salary" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['Salary']?.errors, 'boldItalicError': registerForm.controls['Salary']?.errors}">
+            <div *ngIf="registerForm.controls['Salary']?.errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['Salary']?.errors?.['required']">
+                    Salary is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email" name="email" class="form-control"
+                [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}">
+            <div *ngIf="registerForm.controls['email'].errors" class="invalid-feedback">
+                <div *ngIf="registerForm.controls['email'].errors?.['required']">
+                    Email is required
+                </div>
+                <div *ngIf="registerForm.controls['email'].errors?.['email']">
+                    invalid Email
+                </div>
+            </div>
+        </div>
+
+
+        <div style="justify-content: center; display: flex;">
+            <button type="submit" class="btn btn-primary w-45 mt-3">Submit</button>
+            &nbsp;&nbsp;
+            <button type="reset" class="btn btn-warning w-45 mt-3">Reset</button>
+        </div>
+        <div style="margin-top: 20px;">
+
+            <h6>
+                <fa-icon [icon]="faUser" ></fa-icon> Already have an account? 
+                <a routerLink="/Login" style=" text-decoration: underline;">
+                    Sign in
+                </a>
+            </h6>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,4 @@
+footer {
+    border-top: 1px solid #444;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}

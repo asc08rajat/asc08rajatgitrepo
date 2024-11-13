@@ -1,4 +1,4 @@
-<p>list-emp works!</p>
+    <!-- <p>list-emp works!</p>
 <div class="container">
     <br>
     <h4>Emp-Details</h4>
@@ -20,12 +20,189 @@
                         <td>{{employee.name}}</td>
                         <td>{{employee.salary}}</td>
                         <td><button class="btn btn-danger" (click)="EmployeeDelete(employee.id)">Delete</button></td>
-                        <td><button class="btn btn-success">Update</button></td>
+                        <td><button class="btn btn-warning" (click)="updateEmployee(employee.id)">Update</button></td>
                     </tr>
                 </tbody>
             </table>
-            <input type="text" [(ngModel)]="searchinp">
-            <button (click)="searchinp()"></button>
+            <input type="text" [(ngModel)]="searchinp"> -->
+            <!-- <button (click)="searchinp()"></button> -->
+        <!-- </div>
+    </div>
+</div> --> 
+<!-- 
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Employee Details</h4>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Send Away</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of employees">
+                            <td>{{employee.id}}</td>
+                            <td>{{employee.name}}</td>
+                            <td>{{employee.salary | currency}}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" (click)="EmployeeDelete(employee.id)">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" (click)="updateEmployee(employee.id)">
+                                    <i class="bi bi-pencil-square"></i> Update
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+        <input type="text" [(ngModel)]="searchinpt" name="searchinpt" >
+        <button type="button" (click)="searchEmployee()">Search</button>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Send Away</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of searchEmp">
+                            <td>{{employee.id}}</td>
+                            <td>{{employee.name}}</td>
+                            <td>{{employee.salary | currency}}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" (click)="EmployeeDelete(employee.id)">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" (click)="updateEmployee(employee.id)">
+                                    <i class="bi bi-pencil-square"></i> Update
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container mt-5">
+    
+    <button type="button" class="btn btn-outline-warning btn-sm " style="margin-left: 1000px;" (click)="logout()">logout</button>
+    <div class="card shadow-lg border-0">
+        <!-- Header Section -->
+        <div class="card-header bg-gradient-primary text-black">
+            <h4 class="mb-0 text-center">Employee Details</h4>
+        </div>
+        
+        <!-- Main Content Section -->
+        <div class="card-body p-4">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search by ID"
+                        [(ngModel)]="searchinpt"
+                        name="searchinpt"
+                    />
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary w-100" (click)="searchEmployee()">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Send Away</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of employees" class="fw-semibold">
+                            <td>{{ employee.id }}</td>
+                            <td>{{ employee.name }}</td>
+                            <td>{{ employee.salary | currency }}</td>
+                            <td>
+                                <button class="btn btn-outline-danger btn-sm" (click)="EmployeeDelete(employee.id)">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-warning btn-sm" (click)="updateEmployee(employee.id)">
+                                    <i class="bi bi-pencil-square"></i> Update
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Search Results Section -->
+            <div class="card mt-4">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Search Results</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Salary</th>
+                                    <th>Send Away</th>
+                                    <th>Change</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let employee of searchEmp" class="fw-semibold">
+                                    <td>{{ employee.id }}</td>
+                                    <td>{{ employee.name }}</td>
+                                    <td>{{ employee.salary | currency }}</td>
+                                    <td>
+                                        <button class="btn btn-outline-danger btn-sm" (click)="EmployeeDelete(employee.id)">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-warning btn-sm" (click)="updateEmployee(employee.id)">
+                                            <i class="bi bi-pencil-square"></i> Update
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

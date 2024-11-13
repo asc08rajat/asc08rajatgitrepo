@@ -27,7 +27,16 @@
       "gender": "male",
       "beverages": "Tea",
       "meal": "Nonveg"
+    },
+    {
+      "id": "8554",
+      "name": "rajat anil lad",
+      "Dob": "2024-11-05",
+      "Age": 22,
+      "Email": "rajatlad2002@gmail.com",
+      "Gender": "male",
+      "Beverages": "",
+      "Meal": ""
     }
-   
   ]
 }
