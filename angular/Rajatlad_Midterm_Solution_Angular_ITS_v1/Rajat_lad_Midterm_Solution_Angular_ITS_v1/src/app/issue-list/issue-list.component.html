@@ -1,0 +1,118 @@
+<div class="container mt-5">
+    
+    <button type="button" class="btn btn-outline-warning btn-sm " style="margin-left: 1000px;" (click)="logout()">logout</button>
+    <button type="button" class="btn btn-outline-warning btn-sm " style="margin-left: 1000px;" (click)="addissue()">Add</button>
+    <div class="card shadow-lg border-0">
+        
+        <div class="card-header bg-gradient-primary text-black">
+            <h4 class="mb-0 text-center">Issue Details</h4>
+        </div>
+        
+      
+        <div class="card-body p-4">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search by ID"
+                        [(ngModel)]="searchinpt"
+                        name="searchinpt"
+                    />
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary w-100" (click)="searchEmployee()">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Issue_Id</th>
+                            <th>title</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                            <th>status</th>
+                            <th>Assigne</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let issue of issue" class="fw-semibold">
+                            <td>{{ issue.Issue_Id }}</td>
+                            <td>{{ issue.Title}}</td>
+                            <td>{{ issue.Description }}</td>
+                            <td>{{ issue.Priority }}</td>
+                            <td>{{ issue.Status}}</td>
+                            <td>{{ issue.Assignee}}</td>
+                            <td>{{ issue.Date}}</td>
+                            
+                            <td>
+                                <button class="btn btn-outline-danger btn-sm" (click)="deleteIssue(issue.Issue_Id)">
+                                    <i class="bi bi-trash"></i> Delete
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-warning btn-sm" (click)="updateIssue(issue.Issue_Id)">
+                                    <i class="bi bi-pencil-square"></i> Update
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+          
+            <div class="card mt-4">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Search Results</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Issue_Id</th>
+                                    <th>title</th>
+                                    <th>Description</th>
+                                    <th>Priority</th>
+                                    <th>status</th>
+                                    <th>Assigne</th>
+                                    <th>Date</th>
+                                    <th>Delete</th>
+                                    <th>Update</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let issue of searchIssue" class="fw-semibold">
+                                    <td>{{ issue.Issue_Id }}</td>
+                                    <td>{{ issue.Title}}</td>
+                                    <td>{{ issue.Description }}</td>
+                                    <td>{{ issue.Priority }}</td>
+                                    <td>{{ issue.Status}}</td>
+                                    <td>{{ issue.Assignee}}</td>
+                                    <td>{{ issue.Date}}</td>
+                                    <td>
+                                        <button class="btn btn-outline-danger btn-sm" (click)="deleteIssue(issue.Issue_Id)">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-warning btn-sm" (click)="updateIssue(issue.Issue_Id)">
+                                            <i class="bi bi-pencil-square"></i> Update
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
