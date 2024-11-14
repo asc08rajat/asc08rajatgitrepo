@@ -1,5 +1,5 @@
 export class Issue{
-
+    id:any;
     Issue_Id:number;
     Title:string;
     Description:string;

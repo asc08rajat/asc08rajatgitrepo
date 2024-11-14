@@ -27,7 +27,7 @@ ngOnInit(): void {
  deleteIssue(Issue_Id:number){
    if(Issue_Id!==undefined){
   this.issueService.deleteIssue(Issue_Id).subscribe(()=>{
-   this.issue=this.issue.filter(issueData=>issueData.Issue_Id!=Issue_Id);
+   this.issue=this.issue.filter(issueData=>issueData.Issue_Id!==Issue_Id);
   
   })
  }
