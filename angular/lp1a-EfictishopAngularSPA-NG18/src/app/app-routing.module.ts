@@ -18,6 +18,7 @@ const routes :Routes=[
     {path:'update-emp/:id',component:UpdateEmpComponent}
 ]
 @NgModule({
+
     
     imports:[RouterModule.forRoot(routes)],
     exports:[RouterModule],
@@ -28,4 +29,5 @@ const routes :Routes=[
 
 export class AppRoutingModule{
 
+    
 }

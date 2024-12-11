@@ -13,7 +13,8 @@ const routes:Routes=[
     {path:'login',component:LoginComponent},
     {path:'issue-list',component:IssueListComponent ,canActivate:[AuthGuardService]},
     {path:'update-issue/:id',component:UpdateIssueComponent},
-    {path:'addissue',component:AddissueComponent}
+    {path:'addissue',component:AddissueComponent},
+    
 ]
 @NgModule({
     imports:[RouterModule.forRoot(routes)],
@@ -22,5 +23,8 @@ const routes:Routes=[
 
 })
 export class AppRouting{
-
+// write code for on submit
+onSubmit(){
+    
+}
 }

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
     height: 75vh; 
     background-color: #f0f8ff;
     text-align: center;

@@ -1,0 +1,19 @@
+#main{
+    background-image: url('../../../public/football.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.navbar-nav .nav-link {
+    color: #f8f9fa;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+  

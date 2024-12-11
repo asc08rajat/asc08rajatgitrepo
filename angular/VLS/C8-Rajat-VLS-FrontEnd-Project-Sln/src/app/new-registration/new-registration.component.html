@@ -1,0 +1,68 @@
+
+<div class="container mt-5 p-4 shadow-lg rounded" style="max-width: 400px;" id="login">
+    <h2 class="text-center mb-4 text-primary fw-bold">Admin Register</h2>
+    <form [formGroup]="loginForm">
+        <div class="mb-4">
+            <label for="username" class="form-label text-secondary">Enter Email:</label>
+            <input 
+                type="email" 
+                id="username" 
+                formControlName="username" 
+                class="form-control" 
+                placeholder="Enter your email" 
+                [ngClass]="{'is-invalid': submitted && loginForm.controls['username'].errors, 'boldItalicError': loginForm.controls['username'].errors}"
+            >
+            <div *ngIf="loginForm.controls['username'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="loginForm.controls['username'].errors?.['required']">
+                    Email is required
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="phonenumber" class="form-label text-secondary">Enter Phone no:</label>
+            <input 
+                type="text" 
+                id="phonenumber" 
+                formControlName="phonenumber" 
+                class="form-control" 
+                placeholder="Enter your phone no" 
+                [ngClass]="{'is-invalid': submitted && loginForm.controls['phonenumber'].errors, 'boldItalicError': loginForm.controls['phonenumber'].errors}"
+            >
+            <div *ngIf="loginForm.controls['phonenumber'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="loginForm.controls['phonenumber'].errors?.['required']">
+                    phone number is required
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mb-4">
+            <label for="password" class="form-label text-secondary">Enter Password:</label>
+            <input 
+                type="password" 
+                id="password" 
+                formControlName="password" 
+                class="form-control" 
+                placeholder="Enter your password" 
+                [ngClass]="{'is-invalid': submitted && loginForm.controls['password'].errors, 'boldItalicError': loginForm.controls['password'].errors}"
+            >
+            <div *ngIf="loginForm.controls['password'].errors" class="invalid-feedback boldItalicError">
+                <div *ngIf="loginForm.controls['password'].errors?.['required']">
+                    Password is required
+                </div>
+                <div *ngIf="loginForm.controls['password'].errors?.['pattern']">
+                    Must include uppercase, lowercase, number & special character
+                </div>
+            </div>
+        </div>
+        <button 
+            type="button" 
+            (click)="onSubmit()" 
+            class="btn btn-primary w-100 fw-bold shadow-sm"
+        >
+            Register
+        </button>
+       
+    </form>
+</div>

@@ -1,0 +1,84 @@
+<!-- dashboard.component.html -->
+
+  <!-- <div class="dashboard-container">
+    <div class="sidebar">
+      <ul>
+        <li><a routerLink="/dashboard/teams" routerLinkActive="active">Teams</a></li>
+        <li><a routerLink="/dashboard/players" routerLinkActive="active">Players</a></li>
+        <li><a routerLink="/dashboard/tournaments" routerLinkActive="active">Tournaments</a></li>
+        <li><a routerLink="/dashboard/matches" routerLinkActive="active">Matches</a></li>
+        <li><a routerLink="/dashboard/tickets" routerLinkActive="active">Tickets</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div> -->
+
+
+  <!-- <div class="dashboard-container">
+    <div class="sidebar">
+      <h2>Sports Dashboard</h2>
+      <ul>
+        <li><a routerLink="/dashboard/teams" routerLinkActive="active">Teams</a></li>
+        <li><a routerLink="/dashboard/players" routerLinkActive="active">Players</a></li>
+        <li><a routerLink="/dashboard/tournaments" routerLinkActive="active">Tournaments</a></li>
+        <li><a routerLink="/dashboard/matches" routerLinkActive="active">Matches</a></li>
+        <li><a routerLink="/dashboard/tickets" routerLinkActive="active">Tickets</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+   -->
+
+
+
+   <div class="dashboard-container">
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a routerLink="/dashboard/tournaments" routerLinkActive="active">
+            <i class="fas fa-trophy"></i> Tournaments
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/dashboard/matches" routerLinkActive="active">
+            <i class="fas fa-futbol"></i> Matches
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/dashboard/teams" routerLinkActive="active">
+            <i class="fas fa-users"></i> Teams
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/players" routerLinkActive="active">
+            <i class="fas fa-user"></i> Players
+          </a>
+        </li>
+        
+        
+        <li>
+          <a routerLink="/dashboard/tickets" routerLinkActive="active">
+            <i class="fas fa-ticket-alt"></i> Tickets
+          </a>
+        </li> 
+        
+        <div style="padding-top: 160px;">
+        <button  class="btn btn-outline-warning w-100" (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>          Logout</button>
+      </div>
+       
+      </ul>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

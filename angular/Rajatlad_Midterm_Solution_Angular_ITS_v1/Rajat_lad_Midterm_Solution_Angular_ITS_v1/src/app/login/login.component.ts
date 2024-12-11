@@ -23,6 +23,7 @@ export class LoginComponent  implements OnInit{
   }
 
   onSubmit(){
+    this.submitted=true
     console.log(this.loginForm.value);
     const username:string=this.loginForm.get("username").value;
     const password:string=this.loginForm.get("password").value;
