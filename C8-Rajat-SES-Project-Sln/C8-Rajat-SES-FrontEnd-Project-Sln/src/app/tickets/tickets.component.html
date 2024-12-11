@@ -1,0 +1,152 @@
+<div class="ticket-table-container">
+  <div class="header-actions">
+    <input
+      type="text"
+      placeholder="Search by Buyer Name or ID"
+      [(ngModel)]="searchQuery"
+      (input)="searchTickets()"
+      class="form-control search-input"
+    />
+    <button style="background-color: rgb(252, 195, 111);"
+      type="button"
+      class="btn btn-warning w-25"
+      (click)="openDialog()"
+    >
+      Add Ticket
+    </button>
+  </div>
+  <h2>Ticket Details</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Ticket ID</th>
+        <th>Buyer Name</th>
+        <th>Seat Number</th>
+        <th>Price</th>
+        <th>Purchase Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of filteredTickets">
+        <td>{{ ticket.ticket_id }}</td>
+        <td>{{ ticket.buyer_name }}</td>
+        <td>{{ ticket.seat_number }}</td>
+        <td>{{ ticket.ticket_price }}</td>
+        <td>{{ ticket.purchase_date | date }}</td>
+        <td>
+          <button
+            class="btn btn-outline-danger btn-sm"
+            (click)="deleteTicket(ticket.id)"
+          >
+            Delete
+          </button>
+          <!-- &nbsp;
+          <button
+            class="btn btn-outline-warning btn-sm"
+            (click)="openDialog(ticket)"
+          >
+            Update
+          </button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal Dialog -->
+  <div class="modal" *ngIf="showDialog">
+    <div class="modal-content">
+      <h2 *ngIf="!isUpdateMode">Add New Ticket</h2>
+      <h2 *ngIf="isUpdateMode">Update Ticket</h2>
+      <form (ngSubmit)="saveOrUpdateTicket()" #ticketForm="ngForm" novalidate>
+        <!-- <div class="form-group">
+          <label for="ticket_id">Ticket ID</label>
+          <input
+            type="text"
+            id="ticket_id"
+            [(ngModel)]="ticketData.ticket_id"
+            name="ticket_id"
+            class="form-control"
+            required
+            #ticketId="ngModel"
+          />
+          <div class="error" *ngIf="ticketId.invalid && ticketId.touched">
+            Ticket ID is required.
+          </div>
+        </div> -->
+        <div class="form-group">
+          <label for="buyer_name">Buyer Name</label>
+          <input
+            type="text"
+            id="buyer_name"
+            [(ngModel)]="ticketData.buyer_name"
+            name="buyer_name"
+            class="form-control"
+            required
+            #buyerName="ngModel"
+          />
+          <div class="error" *ngIf="buyerName.invalid && buyerName.touched">
+            Buyer Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="seat_number">Seat Number</label>
+          <input
+            type="text"
+            id="seat_number"
+            [(ngModel)]="ticketData.seat_number"
+            name="seat_number"
+            class="form-control"
+            required
+            #seatNumber="ngModel"
+          />
+          <div class="error" *ngIf="seatNumber.invalid && seatNumber.touched">
+            Seat Number is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ticket_price">Price</label>
+          <input
+            type="number"
+            id="ticket_price"
+            [(ngModel)]="ticketData.ticket_price"
+            name="ticket_price"
+            class="form-control"
+            required
+            #ticketPrice="ngModel"
+          />
+          <div class="error" *ngIf="ticketPrice.invalid && ticketPrice.touched">
+            Price is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="purchase_date">Purchase Date</label>
+          <input
+            type="date"
+            id="purchase_date"
+            [(ngModel)]="ticketData.purchase_date"
+            name="purchase_date"
+            class="form-control"
+            required
+            #purchaseDate="ngModel"
+          />
+          <div class="error" *ngIf="purchaseDate.invalid && purchaseDate.touched">
+            Purchase Date is required.
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="ticketForm.invalid"
+          >
+            {{ isUpdateMode ? 'Update' : 'Save' }}
+          </button>
+          <button type="button" class="btn btn-danger" (click)="closeDialog()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
